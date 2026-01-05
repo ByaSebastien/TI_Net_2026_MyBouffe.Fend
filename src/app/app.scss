@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  header {
+    background-color: darkcyan;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+    background-color: gold;
+    padding: 0.5rem;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  footer {
+    text-align: center;
+    padding: 0.2rem;
+    background-color: lightgrey;
+  }
+}
