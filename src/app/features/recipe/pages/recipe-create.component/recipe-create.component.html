@@ -1,0 +1,28 @@
+<h2>Ajouter une recette</h2>
+<form [formGroup]="recipeForm" (ngSubmit)="submit()">
+  <p-floatlabel variant="on">
+    <input pInputText id="name" formControlName="name" autocomplete="off" />
+    <label for="name">Nom de la recette</label>
+  </p-floatlabel>
+  <p-floatlabel variant="on">
+    <textarea pTextarea id="description" formControlName="description" rows="5" cols="30" style="resize: none" class="h-full"></textarea>
+    <label for="description">Description</label>
+  </p-floatlabel>
+  <p-floatlabel variant="on">
+    <textarea pTextarea id="composition" formControlName="composition" rows="5" cols="30" style="resize: none" class="h-full"></textarea>
+    <label for="composition">Composition</label>
+  </p-floatlabel>
+  <p-floatlabel variant="on">
+    <textarea pTextarea id="steps" formControlName="steps" rows="5" cols="30" style="resize: none" class="h-full"></textarea>
+    <label for="steps">Etapes</label>
+  </p-floatlabel>
+  <p-inputnumber formControlName="servingSize" [showButtons]="true" buttonLayout="horizontal" inputId="horizontal" spinnerMode="horizontal" [step]="1">
+    <ng-template #decrementbuttonicon>
+      <span class="pi pi-minus"></span>
+    </ng-template>
+    <ng-template #incrementbuttonicon>
+      <span class="pi pi-plus"></span>
+    </ng-template>
+  </p-inputnumber>
+  <p-button label="Ajouter" icon="pi pi-check" [loading]="loading" type="submit"/>
+</form>
